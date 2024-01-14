@@ -1,4 +1,4 @@
-package com.didgers.test.technique;
+package com.tennis.bforbank;
 
 public class Tennis {
 

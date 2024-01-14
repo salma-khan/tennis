@@ -1,4 +1,4 @@
-package com.didgers.test.technique;
+package com.tennis.bforbank;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
