@@ -13,11 +13,20 @@ class TennisTest {
 
 
     private static Stream<Arguments> provideSequenceForDeuce() {
-        return Stream.of(Arguments.of("Given score are equals and less then 40 then the game is NOT DEUCE", "AB", false), Arguments.of("Given score are both 40, then game is DEUCE", "AAABBB", true), Arguments.of("Given score are not equals Then game is NOT DEUCE", "AAABBBB", false), Arguments.of("Given score is AVD For A and B won ball Then game is DEUCE", "AAABBBAB", true), Arguments.of("Given score is AVD For B and A won ball Then game is DEUCE", "BBBAAABA", true));
+        return Stream.of(Arguments
+                .of("Given score are equals and less then 40 then the game is NOT DEUCE", "AB", false),
+                Arguments.of("Given score are both 40, then game is DEUCE", "AAABBB", true),
+                Arguments.of("Given score are not equals Then game is NOT DEUCE", "AAABBBB", false),
+                Arguments.of("Given score is AVD For A and B won ball Then game is DEUCE", "AAABBBAB", true),
+                Arguments.of("Given score is AVD For B and A won ball Then game is DEUCE", "BBBAAABA", true));
     }
 
     private static Stream<Arguments> provideSequenceForWinner() {
-        return Stream.of(Arguments.of("Given score is playerA:40/playerB: x<40 and playerA won the ball Then playerA is winner", "AABBAA", 'A', true), Arguments.of("Given score is playerA:x<40 /playerB: 40 and playerB won the ball Then playerB is winner", "BBAABB", 'B', true), Arguments.of("Given score is playerA:ADV and playerA won the ball Then playerA is winner", "AAABBBAA", 'A', true), Arguments.of("Given score is playerB:ADV and playerB won the ball Then playerB is winner", "BBBAAABB", 'B', true), Arguments.of("No winner : Given score is playerA:15/ playerB:15", "AB", 'B', false), Arguments.of("No Winner:  Given score is playerA:15/ playerB:15", "AB", 'A', false)
+        return Stream.of(Arguments.of("Given score is playerA:40/playerB: x<40 and playerA won the ball Then playerA is winner", "AABBAA", 'A', true),
+                Arguments.of("Given score is playerA:x<40 /playerB: 40 and playerB won the ball Then playerB is winner", "BBAABB", 'B', true),
+                Arguments.of("Given score is playerA:ADV and playerA won the ball Then playerA is winner", "AAABBBAA", 'A', true),
+                Arguments.of("Given score is playerB:ADV and playerB won the ball Then playerB is winner", "BBBAAABB", 'B', true),
+                Arguments.of("No winner : Given score is playerA:15/ playerB:15", "AB", 'B', false), Arguments.of("No Winner:  Given score is playerA:15/ playerB:15", "AB", 'A', false)
 
         );
     }

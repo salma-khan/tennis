@@ -30,16 +30,16 @@ public class Tennis {
             }
 
             if (isAdvantageFor(currentPlayer)) {
-                System.out.printf("ADV %c%n", currentPlayer);
+                System.out.println(String.format("ADV %c", currentPlayer));
                 continue;
             }
 
             if (isWinner(currentPlayer)) {
-                System.out.printf("Winner is %c%n", currentPlayer);
+                System.out.println(String.format("Winner is %c", currentPlayer));
                 break;
             }
 
-            System.out.printf((SCORE_PRINTS) + "%n", Points.from(scoreA).getName(), Points.from(scoreB).getName());
+            System.out.println(String.format(SCORE_PRINTS, Points.from(scoreA).getName(), Points.from(scoreB).getName()));
         }
 
     }
